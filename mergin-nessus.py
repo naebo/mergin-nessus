@@ -58,11 +58,11 @@ def main():
     input_args = sys.argv[3:]
 
     if len(input_args) == 1 and os.path.isdir(input_args[0]):
-        # A whole folder? Someone's feeling fancy! 😎
+        # A whole folder!?
         input_folder = input_args[0]
         files_to_merge = [os.path.join(input_folder, f) for f in os.listdir(input_folder) if f.endswith('.nessus')]
     else:
-        # Just files? Classic elegance, I must say. 🎩
+        # Just files!?
         files_to_merge = input_args
 
     combined_tree = merge_nessus_files(files_to_merge, new_report_name)
